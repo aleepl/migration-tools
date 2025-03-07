@@ -1,0 +1,10 @@
+id = "d7b19708-79f4-49a7-9b7b-8d2cc3fc24e3"
+databaseType = "PostgreSQL"
+name = "MyFirstFlywayProject"
+
+[flyway]
+locations = [ "filesystem:migrations" ]
+schemaModelLocation = "schema-model"
+mixed = true
+outOfOrder = true
+validateMigrationNaming = true

@@ -1,0 +1,1 @@
+ALTER TABLE flyway.person ADD COLUMN height INT NOT NULL DEFAULT 0;

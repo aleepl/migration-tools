@@ -1,0 +1,192 @@
+{
+    "database-engine": "postgresql",
+    "database-properties": {
+        "database-version": "150004",
+        "database-flavor": "postgres",
+        "model-version": "3.9"
+    },
+    "objects": [
+        {
+            "objectType": "schema",
+            "fullName": "\"flyway\""
+        },
+        {
+            "objectType": "schema",
+            "fullName": "\"public\""
+        },
+        {
+            "objectType": "index",
+            "fullName": "\"flyway\".\"flyway_schema_history_s_idx\"",
+            "table": "\"flyway\".\"flyway_schema_history\"",
+            "type": "btree",
+            "columns": [
+                {
+                    "definition": "success"
+                }
+            ],
+            "isUnique": "False"
+        },
+        {
+            "objectType": "table",
+            "fullName": "\"flyway\".\"business\"",
+            "primaryKey": {
+                "objectType": "primaryKey",
+                "fullName": "\"business_pkey\"",
+                "columns": [
+                    "\"id\""
+                ]
+            },
+            "owner": "postgres",
+            "columns": [
+                {
+                    "objectType": "column",
+                    "fullName": "\"id\"",
+                    "type": "integer",
+                    "null": "NOT NULL",
+                    "generatedAsIdentity": "ALWAYS"
+                },
+                {
+                    "objectType": "column",
+                    "fullName": "\"name\"",
+                    "type": "character varying(100)",
+                    "null": "NOT NULL"
+                }
+            ]
+        },
+        {
+            "objectType": "table",
+            "fullName": "\"flyway\".\"flyway_schema_history\"",
+            "primaryKey": {
+                "objectType": "primaryKey",
+                "fullName": "\"flyway_schema_history_pk\"",
+                "columns": [
+                    "\"installed_rank\""
+                ]
+            },
+            "owner": "postgres",
+            "columns": [
+                {
+                    "objectType": "column",
+                    "fullName": "\"installed_rank\"",
+                    "type": "integer",
+                    "null": "NOT NULL"
+                },
+                {
+                    "objectType": "column",
+                    "fullName": "\"version\"",
+                    "type": "character varying(50)"
+                },
+                {
+                    "objectType": "column",
+                    "fullName": "\"description\"",
+                    "type": "character varying(200)",
+                    "null": "NOT NULL"
+                },
+                {
+                    "objectType": "column",
+                    "fullName": "\"type\"",
+                    "type": "character varying(20)",
+                    "null": "NOT NULL"
+                },
+                {
+                    "objectType": "column",
+                    "fullName": "\"script\"",
+                    "type": "character varying(1000)",
+                    "null": "NOT NULL"
+                },
+                {
+                    "objectType": "column",
+                    "fullName": "\"checksum\"",
+                    "type": "integer"
+                },
+                {
+                    "objectType": "column",
+                    "fullName": "\"installed_by\"",
+                    "type": "character varying(100)",
+                    "null": "NOT NULL"
+                },
+                {
+                    "objectType": "column",
+                    "fullName": "\"installed_on\"",
+                    "type": "timestamp without time zone",
+                    "null": "NOT NULL",
+                    "default": "now()"
+                },
+                {
+                    "objectType": "column",
+                    "fullName": "\"execution_time\"",
+                    "type": "integer",
+                    "null": "NOT NULL"
+                },
+                {
+                    "objectType": "column",
+                    "fullName": "\"success\"",
+                    "type": "boolean",
+                    "null": "NOT NULL"
+                }
+            ]
+        },
+        {
+            "objectType": "table",
+            "fullName": "\"flyway\".\"person\"",
+            "primaryKey": {
+                "objectType": "primaryKey",
+                "fullName": "\"person_pkey\"",
+                "columns": [
+                    "\"id\""
+                ]
+            },
+            "owner": "postgres",
+            "columns": [
+                {
+                    "objectType": "column",
+                    "fullName": "\"id\"",
+                    "type": "integer",
+                    "null": "NOT NULL",
+                    "generatedAsIdentity": "ALWAYS"
+                },
+                {
+                    "objectType": "column",
+                    "fullName": "\"name\"",
+                    "type": "character varying(100)",
+                    "null": "NOT NULL"
+                },
+                {
+                    "objectType": "column",
+                    "fullName": "\"height\"",
+                    "type": "integer",
+                    "null": "NOT NULL",
+                    "default": "0"
+                },
+                {
+                    "objectType": "column",
+                    "fullName": "\"weight\"",
+                    "type": "integer",
+                    "null": "NOT NULL",
+                    "default": "0"
+                },
+                {
+                    "objectType": "column",
+                    "fullName": "\"address\"",
+                    "type": "integer",
+                    "null": "NOT NULL",
+                    "default": "0"
+                },
+                {
+                    "objectType": "column",
+                    "fullName": "\"age\"",
+                    "type": "integer",
+                    "null": "NOT NULL",
+                    "default": "0"
+                },
+                {
+                    "objectType": "column",
+                    "fullName": "\"country\"",
+                    "type": "character varying",
+                    "null": "NOT NULL",
+                    "default": "0"
+                }
+            ]
+        }
+    ]
+}

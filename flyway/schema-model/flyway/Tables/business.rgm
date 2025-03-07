@@ -1,0 +1,22 @@
+table "flyway"."business" {
+  primaryKey = {
+    columns = [
+      "id"
+    ]
+    name = "business_pkey"
+    objectType = primaryKey
+  }
+  owner = postgres
+  columns = (
+    column "id" {
+      type = integer
+      null = NOT NULL
+      generatedAsIdentity = ALWAYS
+    }
+    column "name" {
+      type = character varying(100)
+      null = NOT NULL
+    }
+  )
+}
+

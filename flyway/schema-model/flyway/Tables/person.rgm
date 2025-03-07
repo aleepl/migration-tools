@@ -1,0 +1,47 @@
+table "flyway"."person" {
+  primaryKey = {
+    columns = [
+      "id"
+    ]
+    name = "person_pkey"
+    objectType = primaryKey
+  }
+  owner = postgres
+  columns = (
+    column "id" {
+      type = integer
+      null = NOT NULL
+      generatedAsIdentity = ALWAYS
+    }
+    column "name" {
+      type = character varying(100)
+      null = NOT NULL
+    }
+    column "height" {
+      type = integer
+      null = NOT NULL
+      default = 0
+    }
+    column "weight" {
+      type = integer
+      null = NOT NULL
+      default = 0
+    }
+    column "address" {
+      type = integer
+      null = NOT NULL
+      default = 0
+    }
+    column "age" {
+      type = integer
+      null = NOT NULL
+      default = 0
+    }
+    column "country" {
+      type = character varying
+      null = NOT NULL
+      default = 0
+    }
+  )
+}
+
