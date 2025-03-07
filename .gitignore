@@ -169,3 +169,9 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Flyway ignores
+*.user.toml
+*.artifact
+report.html
+report.json
